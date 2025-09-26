@@ -1,0 +1,50 @@
+.image {
+  width: 1821px;
+  height: 1024px;
+}
+
+.image .all-about-churro {
+  position: fixed;
+  top: 0;
+  left: 208px;
+  width: 1440px;
+  height: 1024px;
+  aspect-ratio: 1.78;
+  object-fit: cover;
+}
+/* Original CSS code should be injected here */
+
+.image {
+  width: 100%;
+  max-width: 1821px;
+  height: 100vh;
+  max-height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image .all-about-churro {
+  position: absolute;
+  top: 0;
+  left: 208px;
+  width: 1440px;
+  height: 1024px;
+  aspect-ratio: 1.78;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1821px) {
+  .image .all-about-churro {
+    left: calc((100% - 1440px) / 2);
+  }
+}
+
+@media (max-width: 1440px) {
+  .image .all-about-churro {
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+}
